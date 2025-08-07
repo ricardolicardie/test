@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- SEO Meta Tags -->
+    <title>Ricardo Licardie - Dreamer & Designer | Web Design & Development Portfolio</title>
+    <meta name="description" content="Portfolio of Ricardo Licardie - Professional Web Designer & Developer. Specializing in modern web design, UI/UX, and creative digital solutions. Available for freelance projects.">
+    <meta name="keywords" content="Ricardo Licardie, web designer, web developer, UI/UX designer, portfolio, freelance, web design, creative design, digital solutions">
+    <meta name="author" content="Ricardo Licardie">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ricardolicardie.com/">
+    <meta property="og:title" content="Ricardo Licardie - Dreamer & Designer | Web Design Portfolio">
+    <meta property="og:description" content="Professional Web Designer & Developer specializing in modern web design, UI/UX, and creative digital solutions. View my portfolio and get in touch for your next project.">
+    <meta property="og:image" content="https://ricardolicardie.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Ricardo Licardie Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ricardolicardie.com/">
+    <meta property="twitter:title" content="Ricardo Licardie - Dreamer & Designer | Web Design Portfolio">
+    <meta property="twitter:description" content="Professional Web Designer & Developer specializing in modern web design, UI/UX, and creative digital solutions.">
+    <meta property="twitter:image" content="https://ricardolicardie.com/images/og-image.jpg">
+    <meta property="twitter:creator" content="@ricardolicardie">
+    <meta property="twitter:site" content="@ricardolicardie">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ricardolicardie.com/">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/theme-toggle.css">
+    <link rel="stylesheet" href="css/security-seo-friendly.css">
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: 'Ricardo Licardie Portfolio',
+            page_location: window.location.href,
+            send_page_view: true
+        });
+        
+        // Custom events for portfolio interactions
+        function trackEvent(eventName, parameters = {}) {
+            gtag('event', eventName, {
+                event_category: 'Portfolio Interaction',
+                event_label: parameters.label || '',
+                value: parameters.value || 0,
+                ...parameters
+            });
+        }
+        
+        // Track form submissions
+        function trackFormSubmission(formType) {
+            trackEvent('form_submission', {
+                event_category: 'Lead Generation',
+                event_label: formType,
+                value: 1
+            });
+        }
+        
+        // Track project views
+        function trackProjectView(projectName) {
+            trackEvent('project_view', {
+                event_category: 'Portfolio Engagement',
+                event_label: projectName
+            });
+        }
+    </script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ricardo Licardie",
+        "jobTitle": "Web Designer & Developer",
+        "description": "Professional Web Designer & Developer specializing in modern web design, UI/UX, and creative digital solutions.",
+        "url": "https://ricardolicardie.com",
+        "image": "https://ricardolicardie.com/images/ricardo-profile.jpg",
+        "sameAs": [
+            "https://twitter.com/ricardolicardie",
+            "https://linkedin.com/in/ricardolicardie",
+            "https://dribbble.com/ricardolicardie",
+            "https://instagram.com/ricardolicardie"
+        ],
+        "knowsAbout": [
+            "Web Design",
+            "Web Development",
+            "UI/UX Design",
+            "Frontend Development",
+            "Responsive Design",
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ],
+        "offers": {
+            "@type": "Service",
+            "serviceType": "Web Design & Development",
+            "description": "Custom web design and development services including responsive websites, UI/UX design, and digital solutions."
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Header Section -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <!-- Desktop Navigation with Logo -->
+                <ul class="nav__menu" id="nav-menu">
+                    <li class="nav__item nav__item--logo">
+                        <a href="#home" class="nav__logo" aria-label="Ricardo Licardie - Home">
+                            <span class="nav__logo-text">RL</span>
+                        </a>
+                        <img src="./images/v15_1053.png" alt="Ricardo Licardie" class="nav__hero-avatar">
+                    </li>
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link nav__link--active" data-section="home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" data-section="about">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link" data-section="work">Work</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link" data-section="services">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#testimonials" class="nav__link" data-section="testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link" data-section="contact">Contact</a>
+                    </li>
+                    <!-- Theme Toggle will be added here by JavaScript -->
+                </ul>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero__avatar">
+                    <img src="./images/v15_1053.png" alt="Ricardo Licardie - Professional Web Designer and Developer" class="hero__image">
+                </div>
+                <h1 class="hero__title">Hey, I'm Ricardo Licardie</h1>
+                <h2 class="hero__subtitle">Dreamer & Designer</h2>
+                <p class="hero__description">
+                    Crafting seamless experiences and bold visuals. High school student by day, creative thinker, and aspiring innovator by night.
+                </p>
+                <div class="hero__actions">
+                    <button class="btn btn--primary" id="get-work-btn" onclick="trackEvent('cta_click', {event_label: 'hero_get_work'})">Get Work Together</button>
+                    <button class="btn btn--secondary" id="available-btn" onclick="trackEvent('cta_click', {event_label: 'hero_available'})">
+                        <span class="status-dot"></span>
+                        Available for new project
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery Section -->
+        <section class="portfolio-gallery" aria-labelledby="gallery-title">
+            <div class="container">
+                <h2 id="gallery-title" class="sr-only">Portfolio Gallery</h2>
+                <div class="gallery__wrapper">
+                    <div class="gallery__scroll" id="gallery-scroll">
+                        <div class="gallery__item">
+                            <article class="gallery-card" onclick="trackProjectView('Dashboard Design')">
+                                <div class="gallery-card__image">
+                                    <img src="./images/v15_715.png" alt="Modern Dashboard Design - Clean and intuitive interface design" loading="lazy">
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Dashboard Design</h3>
+                                    <p class="gallery-card__category">Web Design</p>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="gallery__item">
+                            <article class="gallery-card" onclick="trackProjectView('Mobile App UI')">
+                                <div class="gallery-card__image">
+                                    <img src="./images/v15_723.png" alt="Mobile App UI Design - User-friendly mobile interface" loading="lazy">
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Mobile App UI</h3>
+                                    <p class="gallery-card__category">App Design</p>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="gallery__item">
+                            <article class="gallery-card" onclick="trackProjectView('E-commerce Site')">
+                                <div class="gallery-card__image">
+                                    <img src="./images/v15_731.png" alt="E-commerce Website Design - Modern online shopping experience" loading="lazy">
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">E-commerce Site</h3>
+                                    <p class="gallery-card__category">Web Design</p>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="gallery__item">
+                            <article class="gallery-card" onclick="trackProjectView('Brand Identity')">
+                                <div class="gallery-card__image">
+                                    <img src="./images/v15_945.png" alt="Brand Identity Design - Complete branding solution" loading="lazy">
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Brand Identity</h3>
+                                    <p class="gallery-card__category">Branding</p>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="gallery__item">
+                            <article class="gallery-card" onclick="trackProjectView('Landing Page')">
+                                <div class="gallery-card__image">
+                                    <img src="./images/v15_1010.png" alt="Landing Page Design - High-converting landing page" loading="lazy">
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Landing Page</h3>
+                                    <p class="gallery-card__category">Web Design</p>
+                                </div>
+                            </article>
+                        </div>
+                        
+                        <div class="gallery__item">
+                            <article class="gallery-card" onclick="trackProjectView('Portfolio Site')">
+                                <div class="gallery-card__image">
+                                    <img src="./images/v15_1013.png" alt="Portfolio Website Design - Creative portfolio showcase" loading="lazy">
+                                </div>
+                                <div class="gallery-card__content">
+                                    <h3 class="gallery-card__title">Portfolio Site</h3>
+                                    <p class="gallery-card__category">Web Design</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Navigation -->
+                    <div class="gallery__navigation">
+                        <button class="gallery__nav-btn gallery__nav-btn--prev" id="gallery-prev" aria-label="Previous projects">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="gallery__nav-btn gallery__nav-btn--next" id="gallery-next" aria-label="Next projects">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Gallery Indicators -->
+                    <div class="gallery__indicators" id="gallery-indicators" role="tablist" aria-label="Gallery slides">
+                        <button class="gallery__indicator gallery__indicator--active" data-slide="0" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+                        <button class="gallery__indicator" data-slide="1" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+                        <button class="gallery__indicator" data-slide="2" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+                        <button class="gallery__indicator" data-slide="3" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+                        <button class="gallery__indicator" data-slide="4" role="tab" aria-selected="false" aria-label="Slide 5"></button>
+                        <button class="gallery__indicator" data-slide="5" role="tab" aria-selected="false" aria-label="Slide 6"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>I'm Ricardo Licardie, a curious designer, coder, and storyteller. Currently a student at Springfield High School, but always exploring the limitless possibilities of creativity and technology.</p>
+                        <p>I thrive on transforming ideas into reality, whether it's crafting digital interfaces, designing immersive visuals, or building websites that feel effortless to use.</p>
+                    </div>
+                    <div class="about__photos">
+                        <div class="photo-stack">
+                            <img src="./images/v15_781.png" alt="Ricardo Licardie working on creative projects" class="photo photo--1" loading="lazy">
+                            <img src="./images/v15_784.png" alt="Ricardo Licardie design workspace" class="photo photo--2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="work">
+            <div class="container">
+                <h2 class="section-title">Here's What I've Been Up To.</h2>
+                
+                <div class="work__projects">
+                    <article class="project">
+                        <div class="project__image">
+                            <div class="browser-frame browser-frame--large">
+                                <div class="browser-header">
+                                    <div class="browser-dots">
+                                        <span aria-hidden="true"></span>
+                                        <span aria-hidden="true"></span>
+                                        <span aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <img src="./images/v15_1037.png" alt="Aero Landing page - AI chatbot platform design interface" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Aero Landing page design</h3>
+                            <p class="project__description">
+                                This project focuses on the design and development of a comprehensive AI chatbot platform, Aero.
+                            </p>
+                            <a href="#" class="project__link" onclick="trackEvent('project_link_click', {event_label: 'Aero Landing Page'})">View Project →</a>
+                        </div>
+                    </article>
+
+                    <article class="project">
+                        <div class="project__image">
+                            <div class="browser-frame browser-frame--mobile">
+                                <div class="browser-header">
+                                    <div class="browser-dots">
+                                        <span aria-hidden="true"></span>
+                                        <span aria-hidden="true"></span>
+                                        <span aria-hidden="true"></span>
+                                    </div>
+                                </div>
+                                <img src="./images/v15_1040.png" alt="Dreamland mobile app - Mindfulness and relaxation app interface" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <h3 class="project__title">Dreamland App Concept</h3>
+                            <p class="project__description">
+                                A dreamy mobile app prototype designed for mindfulness and relaxation.
+                            </p>
+                            <a href="#" class="project__link" onclick="trackEvent('project_link_click', {event_label: 'Dreamland App'})">View Project →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Work Experience -->
+                <section class="experience" aria-labelledby="experience-title">
+                    <h3 id="experience-title" class="experience__title">Work Experience</h3>
+                    <div class="experience__list">
+                        <article class="experience__item">
+                            <span class="experience__year">2024 - Present</span>
+                            <span class="experience__role">Lead Designer at</span>
+                            <div class="experience__company">
+                                <img src="/placeholder.svg?height=24&width=24" alt="" class="company-logo" aria-hidden="true">
+                                <span>Aura</span>
+                            </div>
+                        </article>
+                        <article class="experience__item">
+                            <span class="experience__year">2022 - 2024</span>
+                            <span class="experience__role">Senior UI/UX Designer at</span>
+                            <div class="experience__company">
+                                <img src="/placeholder.svg?height=24&width=24" alt="" class="company-logo" aria-hidden="true">
+                                <span>Apple</span>
+                            </div>
+                        </article>
+                        <article class="experience__item">
+                            <span class="experience__year">2020 - 2022</span>
+                            <span class="experience__role">Product Designer at</span>
+                            <div class="experience__company">
+                                <img src="/placeholder.svg?height=24&width=24" alt="" class="company-logo" aria-hidden="true">
+                                <span>Shopify</span>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">How Can I Help?</h2>
+                <p class="services__subtitle">Let's turn your vision into something amazing.</p>
+                
+                <div class="services__grid">
+                    <article class="service-card">
+                        <div class="service-card__icons">
+                            <img src="./images/v15_715.png" alt="" class="service-icon" aria-hidden="true">
+                            <img src="./images/v15_715.png" alt="" class="service-icon service-icon--secondary" aria-hidden="true">
+                        </div>
+                        <h3 class="service-card__title">Web Development</h3>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icons">
+                            <img src="./images/v15_715.png" alt="" class="service-icon" aria-hidden="true">
+                            <img src="./images/v15_723.png" alt="" class="service-icon service-icon--secondary" aria-hidden="true">
+                        </div>
+                        <h3 class="service-card__title">Creative Design</h3>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icons">
+                            <img src="./images/v15_731.png" alt="" class="service-icon" aria-hidden="true">
+                            <img src="./images/v15_731.png" alt="" class="service-icon service-icon--secondary" aria-hidden="true">
+                        </div>
+                        <h3 class="service-card__title">Branding</h3>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card__icons">
+                            <img src="./images/v15_731.png" alt="" class="service-icon" aria-hidden="true">
+                            <img src="./images/v15_731.png" alt="" class="service-icon service-icon--secondary" aria-hidden="true">
+                        </div>
+                        <h3 class="service-card__title">Product Design</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Testimonials</h2>
+                
+                <div class="testimonials__grid">
+                    <article class="testimonial-card">
+                        <blockquote class="testimonial__text">
+                            "Exceptional ability to transform complex problems into elegant design solutions. He was integral in redesigning our app, improving both its functionality and visual appeal."
+                        </blockquote>
+                        <div class="testimonial__author">
+                            <img src="./images/v15_1128.png" alt="David - CEO testimonial" class="testimonial__avatar" loading="lazy">
+                            <div>
+                                <cite class="testimonial__name">David</cite>
+                                <div class="testimonial__role">CEO of Startup</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <blockquote class="testimonial__text">
+                            "Working with Ricardo was an absolute pleasure! His keen eye for detail and deep understanding of user experience transformed our project from concept to reality."
+                        </blockquote>
+                        <div class="testimonial__author">
+                            <img src="./images/v15_1135.png" alt="Sarah - Product Manager testimonial" class="testimonial__avatar" loading="lazy">
+                            <div>
+                                <cite class="testimonial__name">Sarah</cite>
+                                <div class="testimonial__role">Product Manager</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <blockquote class="testimonial__text">
+                            "Ricardo is a product designer who truly elevates the design process. His innovative approach and creative solutions helped us rethink the entire user journey."
+                        </blockquote>
+                        <div class="testimonial__author">
+                            <img src="./images/v15_1142.png" alt="Jessica - Marketing Head testimonial" class="testimonial__avatar" loading="lazy">
+                            <div>
+                                <cite class="testimonial__name">Jessica</cite>
+                                <div class="testimonial__role">Marketing Head</div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <blockquote class="testimonial__text">
+                            "He has an exceptional ability to transform complex problems into elegant design solutions, always keeping user experience at the forefront."
+                        </blockquote>
+                        <div class="testimonial__author">
+                            <img src="./images/v15_1149.png" alt="Tom - CTO testimonial" class="testimonial__avatar" loading="lazy">
+                            <div>
+                                <cite class="testimonial__name">Tom</cite>
+                                <div class="testimonial__role">CTO</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get in touch</h2>
+                <p class="contact__description">
+                    I'm always interested in exploring new opportunities, collaborating, or exchanging ideas with like-minded individuals. Feel free to book a call or email me if you'd like to see my portfolio deck or to discuss a potential project.
+                </p>
+                
+                <form class="contact__form" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact-name">Full Name *</label>
+                            <input type="text" id="contact-name" name="name" required aria-describedby="contact-name-error">
+                            <span class="form-error" id="contact-name-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address *</label>
+                            <input type="email" id="contact-email" name="email" required aria-describedby="contact-email-error">
+                            <span class="form-error" id="contact-email-error" role="alert"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Write your Message *</label>
+                        <textarea id="contact-message" name="message" rows="6" required aria-describedby="contact-message-error"></textarea>
+                        <span class="form-error" id="contact-message-error" role="alert"></span>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full" onclick="trackFormSubmission('contact_form')">
+                        <span class="btn__text">Send Message</span>
+                        <span class="btn__loading" aria-hidden="true">Sending...</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">Copyright © 2025 Ricardo Licardie. All rights reserved.</p>
+            <div class="footer__social">
+                <a href="https://twitter.com/ricardolicardie" aria-label="Follow Ricardo on Twitter" onclick="trackEvent('social_click', {event_label: 'twitter'})">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/ricardolicardie" aria-label="Follow Ricardo on Instagram" onclick="trackEvent('social_click', {event_label: 'instagram'})">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/ricardolicardie" aria-label="Connect with Ricardo on LinkedIn" onclick="trackEvent('social_click', {event_label: 'linkedin'})">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="https://dribbble.com/ricardolicardie" aria-label="View Ricardo's work on Dribbble" onclick="trackEvent('social_click', {event_label: 'dribbble'})">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.816zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702-1.81-1.61-4.19-2.586-6.795-2.586-.825 0-1.63.1-2.4.285zm10.335 3.483c-.218.29-1.935 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Email Modal -->
+    <div class="modal" id="email-modal" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+        <div class="modal__overlay" id="modal-overlay" aria-hidden="true"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 id="modal-title" class="modal__title">Let's Work Together</h3>
+                <button class="modal__close" id="modal-close" aria-label="Close modal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal__body">
+                <p class="modal__description">
+                    Ready to start your next project? Send me a message and let's discuss how we can bring your vision to life.
+                </p>
+                <form class="modal__form" id="modal-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="modal-name">Full Name *</label>
+                            <input type="text" id="modal-name" name="from_name" required aria-describedby="modal-name-error">
+                            <span class="form-error" id="modal-name-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal-email">Email Address *</label>
+                            <input type="email" id="modal-email" name="from_email" required aria-describedby="modal-email-error">
+                            <span class="form-error" id="modal-email-error" role="alert"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-company">Company/Organization</label>
+                        <input type="text" id="modal-company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-project">Project Type</label>
+                        <select id="modal-project" name="project_type">
+                            <option value="">Select project type</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="App Design">App Design</option>
+                            <option value="Branding">Branding</option>
+                            <option value="Product Design">Product Design</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-budget">Budget Range</label>
+                        <select id="modal-budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="Under $5,000">Under $5,000</option>
+                            <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                            <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                            <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+                            <option value="Over $50,000">Over $50,000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-timeline">Timeline</label>
+                        <select id="modal-timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="ASAP">ASAP</option>
+                            <option value="Within 1 month">Within 1 month</option>
+                            <option value="2-3 months">2-3 months</option>
+                            <option value="3-6 months">3-6 months</option>
+                            <option value="Flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-message">Project Details *</label>
+                        <textarea id="modal-message" name="message" rows="4" placeholder="Tell me about your project, goals, and any specific requirements..." required aria-describedby="modal-message-error"></textarea>
+                        <span class="form-error" id="modal-message-error" role="alert"></span>
+                    </div>
+                    <div class="modal__actions">
+                        <button type="button" class="btn btn--secondary" id="modal-cancel">Cancel</button>
+                        <button type="submit" class="btn btn--primary" onclick="trackFormSubmission('project_inquiry')">
+                            <span class="btn__text">Send Message</span>
+                            <span class="btn__loading" aria-hidden="true">Sending...</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading" id="loading" aria-hidden="true">
+        <div class="loading__spinner"></div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notification-container" aria-live="polite"></div>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+    <script src="./js/theme-manager.js"></script>
+    <script src="./js/theme-animations.js"></script>
+    <script src="./js/security-seo-friendly.js"></script>
+    <script src="./js/seo-optimization.js"></script>
+</body>
+</html>
