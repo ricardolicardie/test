@@ -36,7 +36,16 @@ const VALIDATION_MESSAGES = {
   email: 'Please enter a valid email address',
   minLength: (field, length) => `${field} must be at least ${length} characters long`
 };
+// ==========================================================================
+//mail malito 
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('available-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.location.href = 'mailto:tucorreo@ejemplo.com?subject=Nuevo%20Proyecto&body=Hola%20Ricardo,%20quiero%20consultar%20sobre%20un%20proyecto.';
+  });
+});
 
+// ==========================================================================
 // Utility Functions
 function throttle(func, limit) {
   let inThrottle;
