@@ -490,11 +490,7 @@ ol {
   transition: all var(--transition-normal);
 }
 
-.header--scrolled {
-  background-color: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  border-bottom-color: var(--color-border);
-}
+
 
 .nav {
   display: flex;
@@ -508,7 +504,7 @@ ol {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.);
   backdrop-filter: blur(10px);
   padding: var(--spacing-xs);
   border-radius: var(--radius-full);
@@ -746,6 +742,16 @@ ol {
   font-weight: 600;
   margin-bottom: 8px;
   color: #000;
+}
+.hero__title::after {
+  content: '|';
+  animation: blink 1s steps(1) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 .hero__subtitle {

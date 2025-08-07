@@ -44,11 +44,7 @@
 }
 
 /* Header adjustments */
-[data-theme="dark"] .header--scrolled {
-  background-color: var(--color-nav-bg);
-  backdrop-filter: blur(20px);
-  border-bottom-color: var(--color-border);
-}
+
 
 [data-theme="dark"] .nav__menu {
   background-color: var(--color-nav-bg);
@@ -83,7 +79,24 @@
 [data-theme="dark"] .hero {
   background-color: var(--color-background);
 }
-
+[data-theme="dark"] .hero__title {
+   color: #fff;
+}
+[data-theme="dark"] .section-title {
+   color: #fff;
+}
+[data-theme="dark"] .experience__title {
+   color: #fff;
+}
+[data-theme="dark"] .service-card__title {
+   color: #fff;
+}
+[data-theme="dark"] .form-group label {
+   color: #fff;
+}
+[data-theme="dark"] .testimonial__name {
+   color: #fff;
+}
 [data-theme="dark"] .about {
   background-color: var(--color-background);
 }

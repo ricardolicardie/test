@@ -15,6 +15,53 @@ const EMAILJS_CONFIG = {
   projectTemplateId: 'template_oghpz1g'    // Template para consultas de proyecto
 };
 
+// ==========================================================================
+//document.addEventListener('DOMContentLoaded', function () {
+  //document.getElementById('available-btn').addEventListener('click', function(e) {
+    //e.preventDefault();
+    //window.location.href = 'mailto:tucorreo@ejemplo.com?subject=New%20Project&body=Hi%20Ricardo,%20quiero%20consultar%20sobre%20un%20proyecto.';
+  //});
+//});
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('available-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const destinationEmail = 'ricardolicardie@gmail.com'; // correo real
+    const subject = encodeURIComponent('New Project Inquiry');
+    const body = encodeURIComponent(`Hi Ricardo,
+      I was reviewing your portfolio and I really liked your work.
+      I am looking for someone for a new project.
+
+      Here are a few details:
+      - Project Name: [Insert Project Name]
+      - Project Description: [Insert Project Description]
+      - Budget: [Insert Budget]
+      - Deadline: [Insert Deadline]
+
+      Looking forward to hearing from you soon!
+
+      Best regards,
+      [Your Name]
+      [Your Email]
+      [Your Phone Number]
+      `);
+
+    // abrir correo
+    window.location.href = `mailto:${destinationEmail}?subject=${subject}&body=${body}`;
+
+    // mostrar notificación
+    const noti = document.getElementById('email-notification');
+    noti.style.display = 'block';
+
+    // ocultar notificación después de 5 segundos
+    setTimeout(() => {
+      noti.style.display = 'none';
+    }, 4000);
+  });
+});
+
+// ==========================================================================
 const ANIMATION_CONFIG = {
   scrollThrottle: 50,
   resizeDebounce: 250,
@@ -36,16 +83,7 @@ const VALIDATION_MESSAGES = {
   email: 'Please enter a valid email address',
   minLength: (field, length) => `${field} must be at least ${length} characters long`
 };
-// ==========================================================================
-//mail malito 
-document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('available-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.location.href = 'mailto:tucorreo@ejemplo.com?subject=Nuevo%20Proyecto&body=Hola%20Ricardo,%20quiero%20consultar%20sobre%20un%20proyecto.';
-  });
-});
 
-// ==========================================================================
 // Utility Functions
 function throttle(func, limit) {
   let inThrottle;
@@ -57,6 +95,7 @@ function throttle(func, limit) {
     }
   };
 }
+
 
 function debounce(func, wait) {
   let timeout;
@@ -767,7 +806,7 @@ class Modal {
       inputs: getElements('#modal-form input, #modal-form select, #modal-form textarea'),
       triggers: {
         getWork: getElement('get-work-btn'),
-        available: getElement('available-btn')
+        
       }
     };
     
@@ -1235,4 +1274,41 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Expose app instance globally for debugging
   window.app = window.PortfolioApp;
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const el = document.querySelector('.hero__title');
+  const texts = [
+    "Hey, I'm Ricardo Licardie",
+    "Let's build something amazing!"
+    
+  ];
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+  let pauseTime = 1200;
+
+  function type() {
+    const currentText = texts[textIndex];
+    if (isDeleting) {
+      el.textContent = currentText.substring(0, charIndex--);
+    } else {
+      el.textContent = currentText.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentText.length + 1) {
+      isDeleting = true;
+      setTimeout(type, pauseTime);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      setTimeout(type, 500);
+    } else {
+      setTimeout(type, isDeleting ? 50 : typingSpeed);
+    }
+  }
+
+  type();
 });
