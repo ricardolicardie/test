@@ -1282,7 +1282,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const texts = [
     "Hey, I'm Ricardo Licardie",
     "Let's build something amazing!"
-    
   ];
   let textIndex = 0;
   let charIndex = 0;

@@ -799,6 +799,7 @@ ol {
   color: #666;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .about__photos {
@@ -817,6 +818,11 @@ ol {
 
 .work__projects {
   margin-bottom: var(--spacing-4xl);
+}
+/* Hover effect: when hovering over projects container, dim all projects except the hovered one */
+.work__projects:hover .project:not(:hover) {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .project {
